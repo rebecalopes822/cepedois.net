@@ -6,11 +6,11 @@ public class Produto
 
     [Required]
     [MaxLength(100)]
-    public string Nome { get; set; }
+    public string Nome { get; set; } = string.Empty; 
 
     [Required]
     public decimal Preco { get; set; }
 
     [MaxLength(200)]
-    public string Descricao { get; set; }
+    public string Descricao { get; set; } = string.Empty;  
 }

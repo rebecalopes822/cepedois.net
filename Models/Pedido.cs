@@ -7,10 +7,10 @@ public class Pedido
     public DateTime DataPedido { get; set; }
 
     [Required]
-    public int ClienteId { get; set; }  // ID do Cliente
+    public int ClienteId { get; set; } 
 
     [Required]
-    public int ProdutoId { get; set; }  // ID do Produto
+    public int ProdutoId { get; set; } 
 
     [Required]
     public int Quantidade { get; set; }

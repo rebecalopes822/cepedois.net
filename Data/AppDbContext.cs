@@ -14,12 +14,10 @@ public class AppDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        // Configura a precisão do campo Preco para Produto
         modelBuilder.Entity<Produto>()
             .Property(p => p.Preco)
             .HasColumnType("decimal(18,2)");
 
-        // Define relacionamento de Pedido com Cliente e Produto via IDs
         modelBuilder.Entity<Pedido>()
             .HasOne<Cliente>()
             .WithMany()

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 public class Cliente
 {
@@ -7,12 +6,11 @@ public class Cliente
 
     [Required]
     [MaxLength(100)]
-    public string Nome { get; set; }
+    public string Nome { get; set; } = string.Empty; 
 
     [Required]
     [MaxLength(100)]
-    public string Email { get; set; }
+    public string Email { get; set; } = string.Empty;  
 
-    // Tornar o campo Pedidos opcional
-    public ICollection<Pedido> Pedidos { get; set; } = new List<Pedido>();  // Inicializado com uma lista vazia
+    public ICollection<Pedido> Pedidos { get; set; } = new List<Pedido>();
 }
